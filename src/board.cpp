@@ -32,7 +32,7 @@ void GameBoard::clear()
     }
 }
 
-void GameBoard::draw() const
+void GameBoard::draw(int score) const
 {
     for(int i = 0; i < width; i++)
     {
@@ -48,6 +48,7 @@ void GameBoard::draw() const
         }
         std::cout << '\n';
     }
+    std::cout << "Score: " << score << '\n'; 
 }
 
 void GameBoard::update(std::vector<Node::Point> &snakePosition, Position foodPosition)

@@ -12,6 +12,7 @@ class Game
         int gamePace;
         bool isGameOver;
         char direction;
+        int score;
         GameBoard board;
         Snake snake;
         Food food;

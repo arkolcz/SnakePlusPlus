@@ -15,7 +15,7 @@ class GameBoard
         GameBoard(int x, int y);
         ~GameBoard();
         void clear();
-        void draw() const;
+        void draw(int score) const;
         void update(std::vector<Node::Point> &v, Position foodPosition);
 };
 #endif

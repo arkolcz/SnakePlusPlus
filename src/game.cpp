@@ -14,6 +14,7 @@ Game::Game() :
     board{width, height},
     food{width, height},
     gamePace{1}, // Represents a delay in seconds introduced to the main game loop
+    score{0},
     isGameOver{false} 
 {}
 
@@ -54,6 +55,7 @@ void Game::checkMoveResult(std::vector<Node::Point> &v)
     {
         case CellType::FOOD:
             food.spawn(v);
+            score++;
             break;
         case CellType::SNAKE:
             isGameOver = true;
@@ -81,7 +83,7 @@ void Game::start()
         snakeLocation.clear();
         snake.getLocation(snakeLocation);
         board.update(snakeLocation, food.getLocation());
-        board.draw();
+        board.draw(score);
         // Make a move and update snake location 
         snake.move(direction);
         snakeLocation.clear();
