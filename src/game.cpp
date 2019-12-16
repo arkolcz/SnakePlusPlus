@@ -27,7 +27,6 @@ void Game::handleBoundryColision(int &x, int &y)
 {
     // On collision with boundry move snake to the
     // opposite side of the same row/col
-
     if(x == 0)
     {
         x = width-1;
@@ -49,6 +48,7 @@ void Game::handleBoundryColision(int &x, int &y)
 
 void Game::checkMoveResult(std::vector<Node::Point> &v)
 {
+    /* Check game logic */
     Node::Point &head = v.front();
     switch(board.gameBoard[head.x + head.y * width])
     {
@@ -82,7 +82,7 @@ void Game::start()
         snake.getLocation(snakeLocation);
         board.update(snakeLocation, food.getLocation());
         board.draw();
-        // Make a move and update snake localization 
+        // Make a move and update snake location 
         snake.move(direction);
         snakeLocation.clear();
         snake.getLocation(snakeLocation);

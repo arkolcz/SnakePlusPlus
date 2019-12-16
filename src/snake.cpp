@@ -9,7 +9,7 @@ Snake::Snake(int boardWidth, int boardHeight)
     head->point.x = boardWidth/2;
     head->point.y = boardHeight/2;
     tail->point.x = boardWidth/2-1;
-    tail->point.y = boardHeight/2-1;
+    tail->point.y = boardHeight/2;
     // Assign pointers to next node 
     head->next = tail;
     tail->next = nullptr; 
