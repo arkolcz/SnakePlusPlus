@@ -34,11 +34,11 @@ void GameBoard::clear()
 
 void GameBoard::draw(int score) const
 {
-    for(int i = 0; i < width; i++)
+    for(int i = 0; i < height; i++)
     {
-        for(int j = 0; j < height; j++)
+        for(int j = 0; j < width; j++)
         {
-            switch(gameBoard[i + j * width])
+            switch(gameBoard[j + i * width])
             {
                 case CellType::BOUNDRY : std::cout << "#"; break;
                 case CellType::SNAKE   : std::cout << "X"; break;

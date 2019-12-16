@@ -55,8 +55,8 @@ void Snake::move(char direction)
     head->next = n;
     switch(direction)
     {
-        case 'W': head->point.y += 1; break;
-        case 'S': head->point.y -= 1; break;
+        case 'W': head->point.y -= 1; break;
+        case 'S': head->point.y += 1; break;
         case 'A': head->point.x += 1; break;
         case 'D': head->point.x -= 1; break;
     }
