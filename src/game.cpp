@@ -78,7 +78,7 @@ void Game::start()
     {
         /* Main game loop */
         keyPressListener();
-        // Update board with current sanke location
+        // Update board with current snake location
         board.clear();
         snakeLocation.clear();
         snake.getLocation(snakeLocation);
